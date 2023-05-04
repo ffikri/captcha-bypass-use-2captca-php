@@ -24,9 +24,9 @@ if (strpos($getID, "ERROR_WRONG_GOOGLEKEY") !== false) {
         echo "\033[0;32mERROR!!\e[0m\n";
         die;
     } elseif (strpos($GETresult, "OK") !== false) {
-        echo "\033[0;32mBERHASIL BYPASS CAPTCHA!!\e[0m\n";
-        $pecahinRESULT    = explode("|", $GETresult);
-        $response = $pecahinRESULT[1];
+        $misahRESULT    = explode("|", $GETresult);
+        $response = $misahRESULT[1];
+        echo "\033[0;32mBERHASIL BYPASS CAPTCHA!!\nResponse ID : $response\e[0m\n";
     } else {
         echo $GETresult;
         die;
